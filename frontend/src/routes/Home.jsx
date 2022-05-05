@@ -20,7 +20,7 @@ const Home = () => {
       {/* Cover */}
       <HStack justify="space-between" py="16">
         <VStack align="start" w="50%" spacing="6">
-          <Heading as="h1" color="orange">Discover new games and Buy now using your favorite <Text color="darkblue" as="span">cripto</Text></Heading>
+          <Heading as="h1" color="orange">Discover new games and buy using your favorite <Text color="darkblue" as="span">cripto</Text></Heading>
           <Heading as="h2" fontSize="lg" fontWeight="normal">The world's first and largest digital store for games using ETH.</Heading>
         </VStack>
         <Image src={Illustration} alt="Two people playing games" maxW="45%" />
