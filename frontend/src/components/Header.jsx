@@ -1,25 +1,33 @@
 import { Button, Container, HStack, Image, Input, InputGroup, InputRightElement, Link } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { AvatarGenerator } from 'random-avatar-generator';
 import Logo from "../assets/logo.png";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [connected, setConnected] = useState(false);
   const [image, setImage] = useState('');
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const avatar = new AvatarGenerator().generateRandomAvatar();
     setImage(avatar);
   }, []);
 
+  const submitHandler = (e) => {
+    if((e.type === "keydown" && e.key === "Enter") || e.type === "click") 
+      navigate(`/search?query=${search}`);
+  }
+
   return (
   <Container maxW={"1200px"} w={{base: "100%", sm: "90%"}} px={2} py={4}>
     <HStack align="center" justify="space-between" spacing="8">
       <Link href="/" minW="140px" w="140px"><Image src={Logo} alt="Delta logo"/></Link>
       <InputGroup>
-        <Input placeholder='Search for games' />
-        <InputRightElement children={<SearchIcon />} />
+        <Input placeholder="Search for games" value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={submitHandler}/>
+        <InputRightElement children={<Button onClick={submitHandler} backgroundColor="transparent"><SearchIcon /></Button>} />
       </InputGroup>
       {!connected ? 
       <Button px="6" colorScheme={"orange"} onClick={() => setConnected(true)}>Connect Wallet</Button> : 
