@@ -1,4 +1,4 @@
-import { Button, Container, HStack, Image, Input, InputGroup, InputRightElement, IconButton, Link, Icon } from "@chakra-ui/react";
+import { Button, Container, HStack, Image, Input, InputGroup, InputRightElement, Link } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { useState, useEffect } from "react";
 import { AvatarGenerator } from 'random-avatar-generator';

@@ -1,4 +1,4 @@
-import { Flex, Box, Grid, Container, Button, Image, HStack, VStack, Heading, Text, Divider, GridItem, Spacer } from "@chakra-ui/react";
+import { Flex, Grid, Container, Button, Image, HStack, VStack, Heading, Text, Divider, GridItem, Spacer } from "@chakra-ui/react";
 import Illustration from "../assets/cover.svg";
 
 const Home = () => {
