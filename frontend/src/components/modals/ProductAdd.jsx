@@ -17,7 +17,7 @@ const ProductAdd = ({isOpen, onClose}) => {
     <Modal isOpen={isOpen} onClose={onClose} size="xl">
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Edit product</ModalHeader>
+        <ModalHeader>Add product</ModalHeader>
         <ModalCloseButton />
         <ModalBody overflowY="scroll" maxH="60vh">
           {formControls.map((control, index) => (
