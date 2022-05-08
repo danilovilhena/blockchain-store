@@ -1,4 +1,7 @@
 [x] Search results page with query params
 [x] Product overlay
 [x] Admin page showing all the products and button to add product
-[ ] Purchase page
+[x] Purchase page
+[ ] Add different statuses to confirmation page
+[ ] Add function to admin page
+[ ] Add function to "Connect Wallet" and "Buy now" buttons

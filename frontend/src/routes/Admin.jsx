@@ -32,7 +32,7 @@ const Admin = () => {
       {/* Header */}
       <HStack align="center" justify="space-between" spacing="8" as="header">
         <Link href="/" minW="140px" w="140px"><Image src={Logo} alt="Delta logo"/></Link>
-        <Link href="/" id="admin-return-link"><Button colorScheme={"orange"} variant="outline">Return to home</Button></Link>
+        <Link href="/" className="no-decoration"><Button colorScheme={"orange"} variant="outline">Return to home</Button></Link>
       </HStack>
 
       {/* Products */}

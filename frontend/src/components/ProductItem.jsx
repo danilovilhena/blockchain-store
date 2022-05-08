@@ -1,4 +1,4 @@
-import { Flex, Button, Image, HStack, Text, GridItem, Spacer, useDisclosure } from "@chakra-ui/react";
+import { Flex, Button, Image, HStack, Text, GridItem, Spacer, useDisclosure, Link } from "@chakra-ui/react";
 import ProductDetails from "./modals/ProductDetails";
 
 const ProductItem = ({ item }) => {
@@ -13,7 +13,7 @@ const ProductItem = ({ item }) => {
         <Spacer />
         <HStack p="4">
           <Button colorScheme="orange" variant="outline" onClick={onOpen}>View details</Button>
-          <Button colorScheme="orange">Buy now</Button>
+          <Link href={`/confirmation?id=${item.id}`} className="no-decoration"><Button colorScheme="orange">Buy now</Button></Link>
         </HStack>
       </Flex>
       <ProductDetails isOpen={isOpen} onClose={onClose} item={item}/>

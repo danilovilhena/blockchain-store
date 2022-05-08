@@ -1,4 +1,4 @@
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Image, Text, Badge, HStack, Wrap, WrapItem } from '@chakra-ui/react'
+import { Link, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Image, Text, Badge, HStack, Wrap, WrapItem } from '@chakra-ui/react'
 
 const ProductDetails = ({isOpen, onClose, item}) => {
   return (
@@ -20,7 +20,7 @@ const ProductDetails = ({isOpen, onClose, item}) => {
           <Text><b>Distributor:</b> {item.distributor}</Text>
           <Wrap spacing="4" my="4">
             {item.genres.map((genre, index) => 
-              <WrapItem><Badge key={index} colorScheme="orange" variant="solid" borderRadius="100" px="2">{genre}</Badge></WrapItem>
+              <WrapItem key={index}><Badge colorScheme="orange" variant="solid" borderRadius="100" px="2">{genre}</Badge></WrapItem>
             )}
           </Wrap>
           <Text whiteSpace="pre-line">{item.description}</Text>
@@ -28,7 +28,7 @@ const ProductDetails = ({isOpen, onClose, item}) => {
 
         <ModalFooter>
           <Button variant='ghost' mr={3} onClick={onClose}>Close</Button>
-          <Button colorScheme='orange'>Buy now</Button>
+          <Link href={`/confirmation?id=${item.id}`} className="no-decoration"><Button colorScheme="orange">Buy now</Button></Link>
         </ModalFooter>
       </ModalContent>
     </Modal>

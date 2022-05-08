@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "name": "LEGO Star Wars™: The Skywalker Saga",
         "price": "R$159,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/61f186bb90f1e2247b551b7f/banners/sjqph3geidroun5v2mvn.jpg",
@@ -12,6 +13,7 @@
         "description": "Vivencie os nove filmes da saga Star Wars em um novo jogo LEGO como você nunca viu! Divirta-se em aventuras épicas com humor fantástico e a liberdade de mergulhar totalmente na galáxia de LEGO Star Wars.\n\nQuer jogar como um Jedi? Um Sith? Rebelde, caçador de recompensas ou droide? LEGO Star Wars: A Saga Skywalker contém centenas de personagens jogáveis de toda a galáxia. Seja na terra ou no espaço, diversos veículos estão disponíveis para serem controlados. Avance na velocidade da luz com a Millennium Falcon, voe com o airspeeder T-47 e lute contra os Caças Tie nos X-wings da Resistência… essa é a experiência MÁXIMA de LEGO Star Wars.\n\nA edição digital inclui também um personagem Obi-Wan Kenobi clássico jogável. Vivencie os nove filmes da saga Star Wars em um novo jogo e viaje para uma galáxia muito, muito distante."
     },
     {
+        "id": 1,
         "name": "God of War",
         "price": "R$174,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/61716faa61eca53a843588af/banners/x3bczfjk6l12iayfhd06.jpg",
@@ -24,6 +26,7 @@
         "description": "God of War estará disponível em seu PC!\nAdentre o reino nórdico\n\nCom a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.\n\nTenha uma segunda chance\n\nKratos é pai novamente. Como mentor e protetor de Atreus, um filho determinado a ganhar seu respeito, ele é forçado a encarar e controlar a fúria que há muito tempo o define enquanto viaja por um mundo ameaçador ao lado do filho.\n\nViaje até um mundo sombrio e primitivo habitado por criaturas terríveis\n\nDo mármore e das colunas ornadas do Olimpo para as montanhas, cavernas e florestas sombrias do folclore nórdico pré-era viking, este é um reino claramente novo, com um panteão próprio de criaturas, monstros e deuses.\n\nTrave um combate físico e visceral\n\nCom uma câmera sobre o ombro do personagem que deixa o jogador mais próximo do que nunca da ação, as lutas em God of War™ refletem o panteão de criaturas nórdicas que Kratos vai enfrentar: são grandiosas, realistas e cruéis. A nova arma principal e as novas habilidades mantêm o espírito de God of War, mas também introduzem novos conceitos ao gênero, com uma nova perspectiva para os combates.\n\nDESTAQUES\n\n• Gráficos de alta fidelidade - Um visual impressionante aprimorado no PC. Desfrute da resolução em 4K nos dispositivos suportados, com taxas de quadros desbloqueadas para melhor desempenho. Ajuste as configurações com uma ampla variedade de predefinições e opções gráficas, incluindo sombras com maior resolução, reflexos do espaço da tela melhorados, a adição de GTAO e SSDO e muito mais.\n\n• Suporte a NVIDIA® DLSS e Reflex - Qualidade e desempenho lado a lado. Aproveite o poder da inteligência artificial do NVIDIA Deep Learning Super Sampling (DLSS) para melhorar as taxas de quadros e gerar imagens belas e nítidas em GPUs Nvidia selecionadas. Utilize a tecnologia de baixa latência do NVIDIA Reflex, que permite que você reaja mais rápido e aplique combos mais intensos com a jogabilidade responsiva que você procura em GPUs GeForce.\n\n• Personalização de controles - Jogue do seu jeito. Com suporte aos controles sem fio DUALSHOCK®4 e DUALSENSE®, a vários outros controles e a atalhos totalmente personalizáveis para mouse e teclado, você tem o poder de ajustar qualquer ação para adequá-la ao seu estilo de jogo.\n\n• Suporte à tecnologia ultrawide - Viva a experiência mais imersiva que você já teve. Viaje pelos reinos nórdicos e aprecie as paisagens de tirar o fôlego em widescreen panorâmico. Com suporte a ultrawidescreen de 21:9, God of War™ oferece uma experiência de cinema que amplia ainda mais a visão teatral e fluida original."
     },
     {
+        "id": 2,
         "name": "Middle-earth: Shadow of Mordor",
         "price": "R$12,49",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/557dbcb269702d0a9c600801/banners/lsv97mpj5fk77u9ghc1a.jpg",
@@ -36,6 +39,7 @@
         "description": "Descubra o quão próximo a grandeza você pode chegar em Middle-earth: Shadow of Mordor - Game of the Year Edition. Lute por toda Mordor e enfrente o mal de Sauron, desvende o mistério por trás do espectro, a origens dos Anéis de Poder e então construa a sua lenda nesta épica crônica da Terra-média.\n\nDESTAQUES\n\n• Uma missão exclusiva - Guardians of the Flaming Eye Warband: Encare a elite dos exércitos de Sauron perante o Portão Negro e ganha a runa da Cabeça de Lobo\n\n• Acesso antecipado a série de desafios Trials of War: Jogue a série completa em 4 modos desafiadores: Teste de Poder, Teste de Velocidade, Teste da Sabedoria e o desafio sem fim. Ganhe pontos para aumentar o seu poder, habilidade, velocidade e eficiência e se torne uma lenda nos Ranking.\n\n• Mais conteúdos adicionais no futuro: incluindo missões adicionais de Warband, Runas e Skins: Melhore suas armas com runas poderosas e personalize a aparência de Talion com skins originais."
     },
     {
+        "id": 3,
         "name": "Sid Meier's Civilization VI",
         "price": "R$189,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/5734af9ef372803be90041d3/banners/t13lmjzibhe4rfrohetj.jpg",
@@ -48,6 +52,7 @@
         "description": "Expanda ainda mais seu império com a edição Digital Deluxe de Civilization VI, que inclui o jogo completo, a trilha sonora digital do 25º aniversário e acesso aos seis pacotes\n\nDLC que vão acrescentar novas civilizações, líderes, cenários e mais por um preço reduzido. *Economia em relação a comprar os pacotes DLC individualmente.O DLC individual pode ser vendido separadamente. Se você comprar a edição Digital Deluxe, não compre também os pacotes DLC individuais, pois será cobrado por eles.\n\nSid Meier's Civilization VI é o próximo jogo da franquia vencedora de prêmios, Civilization que já vendeu perto de 33 milhões de unidades ao redor do mundo, incluindo mais de 8 milhões de unidades de Civilization V. Originalmente criado pelo designer de jogos Sid Meier, Civilization é um jogo de estratégia baseado em turnos, onde você tenta criar um império capaz de resistir ao tempo. Torne-se o Governante do Mundo estabelecendo e liderando uma civilização da Idade da Pedra até a Era da Informação.\n\nTrave guerras, pratique a diplomacia, avance sua cultura e enfrente os maiores líderes da história enquanto tenta criar a maior civilização que o mundo já viu. Civilization VI oferece novas formas de interagir com seu mundo: as cidades agora se expandem fisicamente pelo mapa, pesquisas ativas em tecnologias e culturas desbloqueiam novos potenciais, e os líderes competidores irão buscar seus próprios objetivos baseado em seus traços históricos, conforme você compete por uma de cinco formas de obter a vitória no jogo. "
     },
     {
+        "id": 4,
         "name": "Injustice: Gods Among Us",
         "price": "R$49,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/557dbb0269702d0a9ce16700/banners/dmdpj7ark78fyhfriahz.jpg",
@@ -60,6 +65,7 @@
         "description": "Injustice: Gods Among Us Ultimate Edition aprimora o novo e ousado jogo de luta da NetherRealm Studios. Com seis personagens novos, mais de 30 skins atuais e 60 missões inéditas dos Laboratórios S.T.A.R., esta edição vai causar impacto. Além dos ícones da DC Comics como Batman, Coringa, Lanterna Verde, Flash, Superman e Mulher-Maravilha, o novo jogo do estúdio premiado tem uma história profunda e original. Heróis e vilões vão travar batalhas épicas em um mundo onde o limite entre o bem e o mal é tênue."
     },
     {
+        "id": 5,
         "name": "Elden Ring Deluxe Edition",
         "price": "R$302,49",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/618420307c3eff0021fa197f/banners/ipbfq4vj609b88ywrrya.jpg",
@@ -72,6 +78,7 @@
         "description": "ELDEN RING - O NOVO RPG DE AÇÃO E FANTASIA.\n\nLevante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.\n\nDESTAQUES\n\nUm mundo vasto e emocionante - Um mundo vasto onde campos abertos e uma variedade de situações e masmorras imensas, com complexos designs tridimensionais se conectam com fluidez. Conforme explora, sinta a alegria de descobrir poderosas e desconhecidas ameaças que aguardam por você, levando a um grande senso de conquista.\n\nCrie seu próprio personagem - Além de personalizar a aparência do seu personagem, você pode combinar livremente armas, armaduras e magias que equipar. Você pode desenvolver seu personagem de acordo com seu estilo de jogo, como aumentar a força muscular para se tornar um poderoso guerreiro, ou dominar a magia.\n\nUm drama épico nascido de um mito - Uma história cheia de camadas, contada em fragmentos. Um drama épico onde os vários pensamentos dos personagens se interligam nas Terras Intermédias.\n\nJogo on-line único que conecta você livremente aos outros - Além do multijogador, onde você pode se conectar diretamente com outros jogadores e viajarem juntos, o jogo suporta um elemento on-line assíncrono único que permite que você sinta a presença dos outros."
     },
     {
+        "id": 6,
         "name": "Valhalla Hills: Two-Horned Helmet Edition",
         "price": "R$26,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/569d419284850a3e170029de/banners/yubvqnte4yhr3ycu0jaa.jpg",
@@ -84,6 +91,7 @@
         "description": "Você passou toda sua vida agradando seus deuses, lutando e morrendo de forma honrosa. Para isso!? Os pobres Vikings estão de frente aos portões de Asgard, aguardando sua entrada para Valhalla. Mas os deuses ingratos não lhes dão o que merecem e fecham os portões nas suas caras.\n\nNo entanto, um verdadeiro Viking nunca desiste. Se é impossível entrar em Valhalla da forma tradicional, então porque não caminhar até lá? Mas os destemidos Vikings, mesmo sendo extremamente fortes, não se dão bem com os perigos e desafios das montanhas. Tome conta de seus Vikings, reúna comida, corte lenha e tome conta do bem-estar de sua pequena, porém crescente população. Alcance o portal no topo das colinas, esta é a sua única chance de colocar seus Vikings mais perto de sua bem merecida recompensa.\n\nComo nos clássicos jogos de construção, é fundamental aumentar a produtividade dos Vikings orientando um sistema econômico ambicioso e equilibrado em Valhalla Hills. Com a Two-horned Helmet Edition você conquista conteúdo extra para chegar ao objetivo! Além de material adicionar do jogo! Receba o season pass, incluindo 2 DLCs adicionais, mais 5 itens especiais do jogo, o Artbook digital completo, um papel de parede temático, soundtrack digital completa e vídeos do desenvolvedor contando um pouco mais sobre o jogo."
     },
     {
+        "id": 7,
         "name": "NBA 2K22 NBA 75th Anniversary Edition",
         "price": "R$164,83",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/6101eba2a3f8b13d7eeb7683/banners/qbbofzeoccb8obodrouk.jpg",
@@ -96,6 +104,7 @@
         "description": "UM MUNDO DE BASQUETEBOL! O NBA 2K22 coloca todo o universo do basquete nas suas mãos. JOGUE AGORA em ambientes realistas da NBA e da WNBA contra times e jogadores autênticos. Monte o seu time dos sonhos no MyTEAM com as estrelas do presente e as lendas do passado. Percorra a sua própria jornada no MyCAREER e conquiste o sucesso na NBA. Seja um executivo poderoso, coloque à prova a sua capacidade de gerenciamento no MyGM e no MyLEAGUE.\n\nQualquer pessoa, qualquer lugar, só no NBA 2K22."
     },
     {
+        "id": 8,
         "name": "Mortal Kombat 11 Ultimate",
         "price": "R$249,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/5fc7e045c883e627c5c4df9b/banners/u9l5ye7i64iqscniqvkp.jpg",
@@ -108,6 +117,7 @@
         "description": "Mortal Kombat 11 Ultimate inclui:\n\nJogo base;\n\nMortal Kombat 11 Kombat Pack 1;\n\nMortal Kombat 11: Aftermath Expansion;\n\nMortal Kombat 11 Kombat Pack 2;\n\nO JOGO:\n\nA experiência MK11 definitiva! Assuma o controle dos protetores do Plano Terreno em 2 aclamadas Campanhas do Modo História, enquanto eles tentam impedir Kronika de voltar o tempo e reiniciar a história. Com os 37 lutadores do elenco, incluindo Rain, Mileena & Rambo."
     },
     {
+        "id": 9,
         "name": "Tom Clancy's Splinter Cell: Conviction",
         "price": "R$59,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/557dba6769702d0a9c6c2000/banners/ae9kqgyapzbpmchv00rj.jpg",
@@ -120,6 +130,7 @@
         "description": "Sam Fisher agora é um fugitivo brutalmente caçado pelo governo ao qual um dia serviu e, para sobreviver, improviso, adaptação e superação são essenciais. \"Conviction\" dá novos ares a \"Splinter Cell\", já que agora os ambientes se transformaram na principal arma do jogador. É preciso reagir rapidamente a situações de mudanças constantes e utilizar os cenários e multidões para criar distrações e deter os inimigos.\n\nConviction se passa durante o dia, ao contrário dos títulos anteriores, onde a furtividade de se esconder no escuro imperava. Sob a luz do dia, Sam vale-se de todos os modos possíveis que provem sua inocência; isso inclui se esconder no meio da multidão, usar objetos do cenário como defesa ou para se ocultar além é claro de improvisar de várias maneiras, já que seus equipamentos de última geração e armamentos especiais não estarão disponíveis."
     },
     {
+        "id": 10,
         "name": "Ghostwire: Tokyo Deluxe Edition",
         "price": "R$184,14",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/61fd4b330c012800177fc896/banners/ow99mvwjb5wh6dkl5stq.jpg",
@@ -132,6 +143,7 @@
         "description": "Enfrente o desconhecido, revele a verdade e salve a cidade\n\nTóquio foi tomada por forças mortais sobrenaturais em uma invasão orquestrada por um profeta sinistro que fez a população desaparecer instantaneamente. Alie-se a uma poderosa entidade espectral em busca de vingança e domine um arsenal incrível de habilidades para desvendar a verdade sombria por trás dos desaparecimentos enquanto ENFRENTA O DESCONHECIDO em Ghostwire: Tokyo.\n\nDESTAQUES\n\nUma Tóquio Bela E Assombrada - Explore uma visão exclusiva de Tóquio, distorcida devido a uma presença sobrenatural. Com uma paisagem urbana ultramoderna junto a templos tradicionais e vielas estreitas, descubra uma cidade assombrosamente bonita e repleta de yokai: espíritos vingativos que rondam as ruas.\n\nDescubra locais icônicos como o Cruzamento de Shibuya e a Torre de Tóquio, renderizados com detalhes incríveis e construídos para aproveitar a tecnologia de próxima geração. Veja a cidade congelada no tempo após o desaparecimento da população e embarque em uma viagem até o submundo bizarro para salvar sua família.\n\nHabilidades Elementais Devastadoras - Use uma combinação de poderes elementais e habilidades de caça aos fantasmas que podem ser melhorados para combater a ameaça sobrenatural. Use suas habilidades etéreas para subir ao topo da linha do horizonte de Tóquio e avance sobre as ruas para descobrir novas missões ou surpreender seus inimigos."
     },
     {
+        "id": 11,
         "name": "Destiny 2: Legacy Collection",
         "price": "R$149,99",
         "coverImage": "https://assets.nuuvem.com/image/upload/t_banner_big/v1/products/61f93cf81d15a9161cb275ca/banners/oimf3xyhf36tzpcujbzr.jpg",
