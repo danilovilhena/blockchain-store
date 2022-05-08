@@ -1,3 +1,7 @@
 body{
     padding-bottom: 2rem;
 }
+
+#admin-return-link:hover {
+    text-decoration: none;
+}

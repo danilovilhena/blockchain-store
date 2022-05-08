@@ -16,7 +16,7 @@ const Home = () => {
   }
 
   return (
-    <Container maxW={"1200px"} w={{ base: "100%", sm: "90%" }} px={2} py={4}>
+    <Container maxW={"1200px"} w={{ base: "100%", sm: "90%" }} px={2} py={4} as="main">
       {/* Cover */}
       <HStack justify="space-between" py="16">
         <VStack align="start" w="50%" spacing="6">

@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
   <Container maxW={"1200px"} w={{base: "100%", sm: "90%"}} px={2} py={4}>
-    <HStack align="center" justify="space-between" spacing="8">
+    <HStack align="center" justify="space-between" spacing="8" as="header">
       <Link href="/" minW="140px" w="140px"><Image src={Logo} alt="Delta logo"/></Link>
       <InputGroup>
         <Input placeholder="Search for games" value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={submitHandler}/>

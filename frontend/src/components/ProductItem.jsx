@@ -1,5 +1,5 @@
 import { Flex, Button, Image, HStack, Text, GridItem, Spacer, useDisclosure } from "@chakra-ui/react";
-import ProductDetails from "./ProductDetails";
+import ProductDetails from "./modals/ProductDetails";
 
 const ProductItem = ({ item }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
