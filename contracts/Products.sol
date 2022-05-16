@@ -40,7 +40,7 @@ contract Products {
   function buyProduct(uint id) external payable {
     require(msg.value == (products[id].price * 1 ether), 'Need to send exact amount.');
 
-    (bool sent, /*memory data*/) = storeAccount.call{value: msg.value}("");
+    (bool sent, /*memory data*/) = storeAccount.call.value(msg.value)("");
     require(sent, "Failure! ETH not sent");
   }
 }
