@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { AvatarGenerator } from 'random-avatar-generator';
 import Logo from "../assets/logo.png";
 
-const Header = () => {
+const Header = ({initFunction, isConnected}) => {
   const navigate = useNavigate();
-  const [connected, setConnected] = useState(false);
   const [image, setImage] = useState('');
   const [search, setSearch] = useState('');
 
@@ -29,9 +28,9 @@ const Header = () => {
         <Input placeholder="Search for games" value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={submitHandler}/>
         <InputRightElement children={<Button onClick={submitHandler} backgroundColor="transparent"><SearchIcon /></Button>} />
       </InputGroup>
-      {!connected ? 
-      <Button px="6" colorScheme={"orange"} onClick={() => setConnected(true)}>Connect Wallet</Button> : 
-      <Button w="10" h="fit-content" p="0" backgroundColor="transparent" borderRadius="100%" onClick={() => setConnected(false)}><Image src={image} alt="Profile picture"/></Button>}
+      {!isConnected ? 
+      <Button px="6" colorScheme={"orange"} onClick={initFunction}>Connect Wallet</Button> : 
+      <Button w="10" h="fit-content" p="0" backgroundColor="transparent" borderRadius="100%"><Image src={image} alt="Profile picture"/></Button>}
     </HStack>
   </Container>
   );

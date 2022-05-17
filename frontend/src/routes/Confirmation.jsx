@@ -13,7 +13,7 @@ const Confirmation = () => {
   const toast = useToast();
   const query = useQuery();
   let itemId = query.get("id");
-  let item = data.find(el => el.id == itemId);
+  let item = data.find(el => el.id === +itemId);
 
   const confirmPurchase = () => {
     toast({title: "Product purchased!", status: "success", isClosable: true })
