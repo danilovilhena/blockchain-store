@@ -35,7 +35,8 @@
     "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "cd .. && truffle compile && truffle migrate && truffle deploy && cd frontend/"
   },
   "eslintConfig": {
     "extends": [

@@ -1,5 +1,4 @@
 import Web3 from "web3";
-import Contract from "web3-eth-contract";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -10,12 +9,15 @@ import SearchResults from "./routes/SearchResults";
 import Products from "./contracts/Products.json";
 
 const App = () => {
+  const CONTRACT_ADDRESS = "0x0Adc2B012B8E358e59f395a10b635a2D199CCD8D";
+  const INITIAL_ACCOUNT = "0x7468a277740F627157eA95b545ce6372d3446152";
   const [web3Provider, setWeb3Provider] = useState(null);
   const [web3, setWeb3] = useState(null);
   const [isConnected, setIsConnected] = useState(null);
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState(INITIAL_ACCOUNT);
   const [contract, setContract] = useState(null);
   const [error, setError] = useState(null);
+  const [products, setProducts] = useState([]);
 
   const connectWeb3 = async () => {
     try {
@@ -34,14 +36,24 @@ const App = () => {
     setWeb3(new Web3(web3Provider));
   }
 
-  // const initContract = async () => {
-  //   Contract.setProvider(web3Provider);
-  //   let products = JSON.parse(JSON.stringify(Products));
-  //   let id = await web3.eth.net.getId();
-  //   let networkData = products.networks[Object.keys(products.networks)[id - 1]];
-  //   let contract = new Contract(products.abi, networkData.address);
-  //   setContract(contract);
-  // }
+  const initContract = async () => {
+    let products = JSON.parse(JSON.stringify(Products));
+    let contract = await new web3.eth.Contract(products.abi, CONTRACT_ADDRESS, {
+      from: INITIAL_ACCOUNT, // default from address
+      gasPrice: '20000000000' // default gas price
+    });
+    contract.setProvider(web3Provider);
+
+    await setContract(contract);
+
+    await contract.methods.getProducts().call(function (err, res) {
+      if (err) {
+        console.log("An error occured: ", err);
+        return
+      }
+      setProducts(res)
+    });
+  }
 
   const addListeners = () => {
     const accountWasChanged = (accounts) => {
@@ -68,9 +80,9 @@ const App = () => {
   useEffect(() => {
     if(!!web3 && !!web3Provider) {
       addListeners(); 
-      // initContract();
+      initContract();
     } 
-  }, [web3, web3Provider]);
+  }, [web3Provider]);
 
   return (<>
   {!document.location.pathname.startsWith('/admin') && <Header initFunction={connectWeb3} isConnected={isConnected}/>}
