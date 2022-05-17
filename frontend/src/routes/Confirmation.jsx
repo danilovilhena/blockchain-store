@@ -2,18 +2,17 @@ import { Box, Button, Container, Center, Image, Heading, Text, Divider, Link, HS
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useMemo } from "react";
 import { useLocation, Navigate } from "react-router-dom";
-import data from "../assets/data.json";
 
 function useQuery() {
   const { search } = useLocation();
   return useMemo(() => new URLSearchParams(search), [search]);
 }
 
-const Confirmation = () => {
+const Confirmation = ({products}) => {
   const toast = useToast();
   const query = useQuery();
   let itemId = query.get("id");
-  let item = data.find(el => el.id === +itemId);
+  let item = products.find(el => el.id === +itemId);
 
   const confirmPurchase = () => {
     toast({title: "Product purchased!", status: "success", isClosable: true })

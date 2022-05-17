@@ -7,6 +7,7 @@ import Home from "./routes/Home";
 import Confirmation from "./routes/Confirmation";
 import SearchResults from "./routes/SearchResults";
 import Products from "./contracts/Products.json";
+import MOCK_PRODUCTS from "./assets/data.json";
 
 const App = () => {
   const CONTRACT_ADDRESS = "0x0Adc2B012B8E358e59f395a10b635a2D199CCD8D";
@@ -17,7 +18,7 @@ const App = () => {
   const [account, setAccount] = useState(INITIAL_ACCOUNT);
   const [contract, setContract] = useState(null);
   const [error, setError] = useState(null);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(MOCK_PRODUCTS);
 
   const connectWeb3 = async () => {
     try {
@@ -51,7 +52,7 @@ const App = () => {
         console.log("An error occured: ", err);
         return
       }
-      setProducts(res)
+      // setProducts(res)
     });
   }
 
@@ -85,12 +86,12 @@ const App = () => {
   }, [web3Provider]);
 
   return (<>
-  {!document.location.pathname.startsWith('/admin') && <Header initFunction={connectWeb3} isConnected={isConnected}/>}
+  {!document.location.pathname.startsWith('/admin') && <Header initFunction={connectWeb3} isConnected={isConnected} products={products}/>}
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/search" element={<SearchResults />} />
-    <Route path="/admin" element={<Admin />} />
-    <Route path="/confirmation" element={<Confirmation />} />
+    <Route path="/" element={<Home products={products} />} />
+    <Route path="/search" element={<SearchResults products={products} />} />
+    <Route path="/admin" element={<Admin products={products} />} />
+    <Route path="/confirmation" element={<Confirmation products={products} />} />
   </Routes>
   </>)
 }

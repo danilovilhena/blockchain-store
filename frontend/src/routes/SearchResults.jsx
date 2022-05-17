@@ -2,19 +2,18 @@ import { Container, Heading } from "@chakra-ui/react";
 import { useMemo } from "react";
 import { useLocation, Navigate} from "react-router-dom";
 import Products from "../components/Products";
-import data from "../assets/data.json";
 
 function useQuery() {
   const { search } = useLocation();
   return useMemo(() => new URLSearchParams(search), [search]);
 }
 
-const SearchResults = () => {
+const SearchResults = ({products}) => {
   const query = useQuery();
   let shouldRedirect = !query.get("query");
 
   const getResults = () => {
-    return data.filter(el => el.name.toLowerCase().includes(query.get("query").toLowerCase()));
+    return products.filter(el => el.name.toLowerCase().includes(query.get("query").toLowerCase()));
   }
 
   return (<>

@@ -1,10 +1,9 @@
 import { Container, Button, Image, HStack, VStack, Heading, Text, Divider } from "@chakra-ui/react";
 import Illustration from "../assets/cover.svg";
-import data from "../assets/data.json";
 import Products from "../components/Products";
 
-const Home = () => {
-  const array = data;
+const Home = ({products}) => {
+  const array = products;
 
   const getTrending = () => {
     let shuffled = array.sort(() => 0.5 - Math.random());
@@ -44,7 +43,7 @@ const Home = () => {
         <Heading as="h3" fontSize="2xl" id="all-games">All games</Heading>
       </HStack>
       <Divider />
-      <Products items={data}/>
+      <Products items={products}/>
     </Container>
   );
 };

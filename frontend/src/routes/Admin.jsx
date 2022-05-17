@@ -1,6 +1,5 @@
 import { Text, Button, Container, HStack, Heading, Link, Image, Table, Thead, Tbody, Tr, Th, Td, TableContainer, useDisclosure } from "@chakra-ui/react";
 import Logo from "../assets/logo.png";
-import data from "../assets/data.json";
 import ProductAdd from "../components/modals/ProductAdd";
 import ProductDelete from "../components/modals/ProductDelete";
 
@@ -23,9 +22,9 @@ const TableRow = ({item}) => {
   </>)
 }
 
-const Admin = () => {
+const Admin = ({products}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const array = data;
+  const array = products;
 
   return (
     <Container maxW={"1200px"} w={{ base: "100%", sm: "90%" }} px={2} py={4}>
