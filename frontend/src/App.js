@@ -39,12 +39,8 @@ const App = () => {
 
   const initContract = async () => {
     let products = JSON.parse(JSON.stringify(Products));
-    let contract = await new web3.eth.Contract(products.abi, CONTRACT_ADDRESS, {
-      from: INITIAL_ACCOUNT, // default from address
-      gasPrice: '20000000000' // default gas price
-    });
+    let contract = await new web3.eth.Contract(products.abi, CONTRACT_ADDRESS, { from: INITIAL_ACCOUNT, gasPrice: '20000000000' });
     contract.setProvider(web3Provider);
-
     await setContract(contract);
 
     await contract.methods.getProducts().call(function (err, res) {
@@ -75,6 +71,33 @@ const App = () => {
     window.ethereum.on('accountsChanged', accountWasChanged);
     window.ethereum.on('connect', getAccount);
     window.ethereum.on('disconnect', clearAccount);
+  }
+
+  const contractFunctions = {
+    getProducts: async () => {
+      return await contract.methods.getProducts().call((err, res) => {
+        if (err) return err;
+        return res;
+      });
+    },
+    addProduct: async (name, price, coverImage, platforms, releaseDate, developer, distributor, genres, description) => {
+      await contract.methods.addProduct().send(name, price, coverImage, platforms, releaseDate, developer, distributor, genres, description, { from: account }, (err, res) => {
+        if (err) return err;
+        return res;
+      });
+    },
+    removeProduct: async (id) => {
+      await contract.methods.removeProduct().send(id, { from: account }, (err, res) => {
+        if (err) return err;
+        return res;
+      });
+    },
+    buyProduct: async (id, value) => {
+      await contract.methods.buyProduct().send(id, { from: account, value }, (err, res) => {
+        if (err) return err;
+        return res;
+      });
+    }
   }
 
   useEffect(initWeb3, []);
