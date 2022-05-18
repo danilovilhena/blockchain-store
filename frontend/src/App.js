@@ -9,8 +9,8 @@ import Products from "./contracts/Products.json";
 import MOCK_PRODUCTS from "./assets/data.json";
 
 const App = () => {
-  const CONTRACT_ADDRESS = "0x0Adc2B012B8E358e59f395a10b635a2D199CCD8D";
-  const INITIAL_ACCOUNT = "0xe46f06bcd93a4127631d8c6c5cffe5d282552dfd";
+  const CONTRACT_ADDRESS = "0x1243E7988C894CbF890dC3849A8CAeCC07277430";
+  const INITIAL_ACCOUNT = "0x3B64E386C67FA909dA43ce6C1b5F82D58253E33B";
   const [web3Provider, setWeb3Provider] = useState(null);
   const [web3, setWeb3] = useState(null);
   const [isConnected, setIsConnected] = useState(null);
@@ -98,6 +98,7 @@ const App = () => {
     buyProduct: async (id, value) => {
       await contract.methods.buyProduct(id).send({ from: account, value: +value * 1000000000000000000 }, (err, res) => {
         if (err) return err;
+        contractFunctions.getProducts();
         return res;
       });
     }

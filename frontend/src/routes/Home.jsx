@@ -6,8 +6,7 @@ const Home = ({products, functions}) => {
   const array = JSON.parse(JSON.stringify(products)).filter(el => el[12]);
 
   const getTrending = () => {
-    let shuffled = array.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 4);
+    return array.sort((a, b) => (+b[11]) - (+a[11])).slice(0, 4);
   }
 
   const getReleases = () => {

@@ -2,6 +2,6 @@
 [x] Product overlay
 [x] Admin page showing all the products and button to add product
 [x] Purchase page
-[ ] Start new Ganache
-[ ] Run "npm deploy" command
-[ ] Populate blockchain (again)
+[x] Start new Ganache
+[x] Run "npm run deploy" command
+[x] Populate blockchain (again)
