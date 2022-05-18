@@ -3,26 +3,26 @@ import Logo from "../assets/logo.png";
 import ProductAdd from "../components/modals/ProductAdd";
 import ProductDelete from "../components/modals/ProductDelete";
 
-const TableRow = ({item}) => {
+const TableRow = ({item, onDelete}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
             
   return (<>
     <Tr>
       <Td>{item.name}</Td>
-      <Td>{item.price}</Td>
-      <Td>0</Td>
-      <Td>{item.creationDate}</Td>
+      <Td>{item.price} ETH</Td>
+      <Td>{item.sales}</Td>
+      <Td>{new Date(+item.releaseDate).toLocaleDateString()}</Td>
       <Td isNumeric>{
-        Math.random() > 0.2 ? 
+        item.isActive ? 
         <Button onClick={onOpen} backgroundColor="grey" colorScheme="red">Remove</Button> :
         <Text color="red">Removed</Text>
       }</Td>
     </Tr>
-    <ProductDelete isOpen={isOpen} onClose={onClose}/>
+    <ProductDelete isOpen={isOpen} onClose={onClose} onDelete={onDelete} id={item.id}/>
   </>)
 }
 
-const Admin = ({products}) => {
+const Admin = ({products, functions}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const array = products;
 
@@ -38,7 +38,7 @@ const Admin = ({products}) => {
       <HStack justify="space-between">
         <Heading as="h3" fontSize="2xl" mt="12" mb="8">Products</Heading>
         <Button colorScheme="green" onClick={onOpen}>Add product</Button>
-        <ProductAdd isOpen={isOpen} onClose={onClose}/>
+        <ProductAdd isOpen={isOpen} onClose={onClose} functions={functions}/>
       </HStack>
       <TableContainer>
         <Table variant="simple">
@@ -47,19 +47,15 @@ const Admin = ({products}) => {
               <Th>Name</Th>
               <Th>Price</Th>
               <Th>Sales</Th>
-              <Th>Creation date</Th>
+              <Th>Release date</Th>
               <Th isNumeric></Th>
             </Tr>
           </Thead>
           <Tbody>
-            {array.map((item, index) => <TableRow item={item} key={index}/>)}
+            {array.map((item, index) => <TableRow item={item} key={index} onDelete={() => {functions.removeProduct(item.id)}}/>)}
           </Tbody>
         </Table>
       </TableContainer>
-
-      {/* Transactions */}
-      <Heading as="h3" fontSize="2xl" mt="12" mb="8">Transactions</Heading>
-      <Text>No transactions yet.</Text>
     </Container>
   )
 }

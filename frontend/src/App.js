@@ -4,14 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Admin from "./routes/Admin";
 import Home from "./routes/Home";
-import Confirmation from "./routes/Confirmation";
 import SearchResults from "./routes/SearchResults";
 import Products from "./contracts/Products.json";
 import MOCK_PRODUCTS from "./assets/data.json";
 
 const App = () => {
   const CONTRACT_ADDRESS = "0x0Adc2B012B8E358e59f395a10b635a2D199CCD8D";
-  const INITIAL_ACCOUNT = "0x7468a277740F627157eA95b545ce6372d3446152";
+  const INITIAL_ACCOUNT = "0xe46f06bcd93a4127631d8c6c5cffe5d282552dfd";
   const [web3Provider, setWeb3Provider] = useState(null);
   const [web3, setWeb3] = useState(null);
   const [isConnected, setIsConnected] = useState(null);
@@ -24,6 +23,7 @@ const App = () => {
     try {
       const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
       setIsConnected(!!accounts.length);
+      console.log(accounts)
     } catch (error) {
       setError(error);
     }
@@ -48,7 +48,8 @@ const App = () => {
         console.log("An error occured: ", err);
         return
       }
-      // setProducts(res)
+      setProducts(res);
+      console.log(res);
     });
   }
 
@@ -77,23 +78,25 @@ const App = () => {
     getProducts: async () => {
       return await contract.methods.getProducts().call((err, res) => {
         if (err) return err;
-        return res;
+        setProducts(res);
       });
     },
     addProduct: async (name, price, coverImage, platforms, releaseDate, developer, distributor, genres, description) => {
-      await contract.methods.addProduct().send(name, price, coverImage, platforms, releaseDate, developer, distributor, genres, description, { from: account }, (err, res) => {
+      await contract.methods.addProduct(name, price, coverImage, platforms, releaseDate, developer, distributor, genres, description).send({ from: account }, (err, res) => {
         if (err) return err;
+        contractFunctions.getProducts();
         return res;
       });
     },
     removeProduct: async (id) => {
-      await contract.methods.removeProduct().send(id, { from: account }, (err, res) => {
+      await contract.methods.removeProduct(+id).send({ from: account }, (err, res) => {
         if (err) return err;
+        contractFunctions.getProducts();
         return res;
       });
     },
     buyProduct: async (id, value) => {
-      await contract.methods.buyProduct().send(id, { from: account, value }, (err, res) => {
+      await contract.methods.buyProduct(id).send({ from: account, value: +value * 1000000000000000000 }, (err, res) => {
         if (err) return err;
         return res;
       });
@@ -111,10 +114,9 @@ const App = () => {
   return (<>
   {!document.location.pathname.startsWith('/admin') && <Header initFunction={connectWeb3} isConnected={isConnected} products={products}/>}
   <Routes>
-    <Route path="/" element={<Home products={products} />} />
-    <Route path="/search" element={<SearchResults products={products} />} />
-    <Route path="/admin" element={<Admin products={products} />} />
-    <Route path="/confirmation" element={<Confirmation products={products} />} />
+    <Route path="/" element={<Home products={products} functions={contractFunctions} />} />
+    <Route path="/search" element={<SearchResults products={products} functions={contractFunctions} />} />
+    <Route path="/admin" element={<Admin products={products} functions={contractFunctions} />} />
   </Routes>
   </>)
 }

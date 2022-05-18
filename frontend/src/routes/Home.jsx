@@ -2,8 +2,8 @@ import { Container, Button, Image, HStack, VStack, Heading, Text, Divider } from
 import Illustration from "../assets/cover.svg";
 import Products from "../components/Products";
 
-const Home = ({products}) => {
-  const array = products;
+const Home = ({products, functions}) => {
+  const array = JSON.parse(JSON.stringify(products)).filter(el => el[12]);
 
   const getTrending = () => {
     let shuffled = array.sort(() => 0.5 - Math.random());
@@ -11,7 +11,7 @@ const Home = ({products}) => {
   }
 
   const getReleases = () => {
-    return array.sort((a, b) => b.releaseDate.split("/")[2] - a.releaseDate.split("/")[2]).slice(0, 4);
+    return array.sort((a, b) => new Date(+b.releaseDate) - new Date(+a.releaseDate)).slice(0, 4);
   }
 
   return (
@@ -30,20 +30,20 @@ const Home = ({products}) => {
         <Button colorScheme="orange" variant="outline" as="a" href="#all-games">Explore all</Button>
       </HStack>
       <Divider />
-      <Products items={getTrending()}/>
+      <Products onBuy={functions.buyProduct} items={getTrending()}/>
       {/* Latest releases */}
       <HStack justify="space-between" align="center" mb="4" mt="16">
         <Heading as="h3" fontSize="2xl">Latest releases</Heading>
         <Button colorScheme="orange" variant="outline" as="a" href="#all-games">Explore all</Button>
       </HStack>
       <Divider />
-      <Products items={getReleases()}/>
+      <Products onBuy={functions.buyProduct} items={getReleases()}/>
       {/* All games */}
       <HStack justify="space-between" align="center" mb="4" mt="16">
         <Heading as="h3" fontSize="2xl" id="all-games">All games</Heading>
       </HStack>
       <Divider />
-      <Products items={products}/>
+      <Products onBuy={functions.buyProduct} items={array}/>
     </Container>
   );
 };

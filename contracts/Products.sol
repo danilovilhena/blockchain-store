@@ -42,5 +42,6 @@ contract Products {
 
     (bool sent, /*memory data*/) = storeAccount.call.value(msg.value)("");
     require(sent, "Failure! ETH not sent");
+    products[id].sales++;
   }
 }
